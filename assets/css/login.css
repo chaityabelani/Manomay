@@ -1,5 +1,19 @@
 /* Login page enhancements */
+.login-page {
+    background: #000;
+    color: #fff;
+}
+
+.login-page .header,
+.login-page .footer {
+    display: none;
+}
+
 .auth-container {
+    background: #111;
+    border: 1px solid #333;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+
     max-width: 550px;
     padding: 3rem 3rem;
     border-radius: 12px;
