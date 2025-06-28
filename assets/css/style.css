@@ -223,9 +223,33 @@ body {
     margin: 0 auto;
 }
 
+.about-page {
+    padding: 6rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--white);
+}
+
+.about-page h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about-page p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
 .hero h1 {
     font-size: 3.5rem;
     text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    font-weight: 300;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
 }
 
 .hero p {
