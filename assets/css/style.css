@@ -126,7 +126,7 @@ body {
 }
 
 body {
-    background: var(--gradient);
+    background: #000;
     color: var(--white);
 }
 
@@ -169,7 +169,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     z-index: 1000;
@@ -177,7 +177,7 @@ body {
 }
 
 .header.scrolled {
-    background: var(--gradient);
+    background: #000;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
