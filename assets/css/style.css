@@ -34,7 +34,8 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 2rem;
+    padding: 6rem 2rem 2rem; /* top padding accounts for fixed header */
+    scroll-margin-top: 80px; /* ensure heading visible after anchor jump */
 }
 .hero h1 {
     font-size: 3rem;
@@ -209,8 +210,9 @@ body {
 }
 
 .about {
-    padding: 4rem 2rem;
+    padding: 6rem 2rem 4rem; /* extra top padding for fixed header */
     text-align: center;
+    scroll-margin-top: 80px;
 }
 
 .about h2 {

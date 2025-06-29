@@ -1,5 +1,8 @@
 {
   "cleanUrls": true,
+  "redirects": [
+    { "source": "/about", "destination": "/#about", "statusCode": 301 }
+  ],
   "rewrites": [
     { "source": "/", "destination": "/index.html" }
   ]
