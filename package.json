@@ -1,0 +1,14 @@
+{
+  "name": "manomay",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Manomay static site with Vercel serverless functions and MongoDB backend",
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "mongodb": "^6.4.0"
+  }
+}

@@ -1,9 +1,13 @@
 {
   "cleanUrls": true,
+  "functions": {
+    "runtime": "nodejs18.x"
+  },
   "redirects": [
     { "source": "/about", "destination": "/#about", "statusCode": 301 }
   ],
   "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/", "destination": "/index.html" }
   ]
 }
