@@ -1,56 +1,35 @@
-import { MongoClient } from 'mongodb';
+const { MongoClient } = require('mongodb');
 
-let cachedClient;
+let cachedClient = null;
 
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   const uri = process.env.MONGODB_URI;
-  const dbName = process.env.DB_NAME || 'manomay';
-
   if (!uri) {
-    return res.status(500).json({ error: 'MONGODB_URI env var missing' });
+    res.status(500).json({ error: 'Missing MONGODB_URI environment variable' });
+    return;
   }
 
   try {
     if (!cachedClient) {
-      cachedClient = new MongoClient(uri, { maxPoolSize: 10 });
+      cachedClient = new MongoClient(uri, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      });
       await cachedClient.connect();
     }
 
+    const dbName = process.env.MONGODB_DB || 'test';
     const db = cachedClient.db(dbName);
-    const collection = db.collection('submissions');
 
-    switch (req.method) {
-      case 'POST': {
-        const body = req.body ?? await parseJson(req);
-        await collection.insertOne(body);
-        return res.status(201).json({ ok: true });
-      }
-      case 'GET': {
-        const docs = await collection.find().limit(20).toArray();
-        return res.status(200).json(docs);
-      }
-      default:
-        res.setHeader('Allow', 'GET, POST');
-        return res.status(405).json({ error: 'Method not allowed' });
+    if (req.method === 'POST') {
+      const data = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+      const result = await db.collection('submissions').insertOne(data);
+      res.status(200).json({ insertedId: result.insertedId });
+    } else {
+      res.status(405).json({ error: 'Method not allowed' });
     }
   } catch (err) {
     console.error(err);
-    return res.status(500).json({ error: 'Server error', details: err.message });
+    res.status(500).json({ error: 'Internal server error' });
   }
-}
-
-// Fallback JSON parser for environments where req.body isn't pre-parsed
-async function parseJson(req) {
-  return new Promise((resolve, reject) => {
-    let data = '';
-    req.on('data', chunk => (data += chunk));
-    req.on('end', () => {
-      try {
-        resolve(JSON.parse(data || '{}'));
-      } catch (e) {
-        reject(e);
-      }
-    });
-    req.on('error', reject);
-  });
-}
+};
