@@ -9,5 +9,11 @@
   },
   "dependencies": {
     "mongodb": "^5.8.0"
+  },
+  "devDependencies": {
+    "vercel": "^32.6.1"
+  },
+  "engines": {
+    "node": ">=18.x"
   }
 }
