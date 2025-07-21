@@ -33,6 +33,9 @@ export default function Navbar() {
             <Link href="/orders" className="text-white hover:text-gray-200">
               Orders
             </Link>
+            <Link href="/restaurant-signup" className="text-white hover:text-gray-200">
+              Register Restaurant
+            </Link>
             <button
               onClick={handleLogout}
               className="text-white hover:text-gray-200"
@@ -81,6 +84,12 @@ export default function Navbar() {
               className="block px-3 py-2 text-white hover:text-gray-200"
             >
               Orders
+            </Link>
+            <Link
+              href="/restaurant-signup"
+              className="block px-3 py-2 text-white hover:text-gray-200"
+            >
+              Register Restaurant
             </Link>
             <button
               onClick={handleLogout}
