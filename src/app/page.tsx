@@ -6,19 +6,19 @@ import RestaurantCard from '@/components/RestaurantCard';
 
 // Sample data - Replace with actual API calls
 const categories = [
-  { name: 'Pizza', image: 'https://source.unsplash.com/500x500/?pizza' },
-  { name: 'Burger', image: 'https://source.unsplash.com/500x500/?burger' },
-  { name: 'Sushi', image: 'https://source.unsplash.com/500x500/?sushi' },
-  { name: 'Indian', image: 'https://source.unsplash.com/500x500/?indian-food' },
-  { name: 'Chinese', image: 'https://source.unsplash.com/500x500/?chinese-food' },
-  { name: 'Dessert', image: 'https://source.unsplash.com/500x500/?dessert' },
+  { name: 'Pizza', image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGl6emF8ZW58MHx8MHx8fDA%3D' },
+  { name: 'Burger', image: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJ1cmdlcnxlbnwwfHwwfHx8MA%3D%3D' },
+  { name: 'Sushi', image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3VzaGl8ZW58MHx8MHx8fDA%3D' },
+  { name: 'Indian', image: 'https://images.unsplash.com/photo-1589647363585-f4a7d38779df?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGluZGlhbiUyMGZvb2R8ZW58MHx8MHx8fDA%3D' },
+  { name: 'Chinese', image: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hpbmVzZSUyMGZvb2R8ZW58MHx8MHx8fDA%3D' },
+  { name: 'Dessert', image: 'https://images.unsplash.com/photo-1551024601-bec7828449ea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGRlc3NlcnR8ZW58MHx8MHx8fDA%3D' },
 ];
 
 const restaurants = [
   {
     id: '1',
     name: 'Pizza Paradise',
-    image: 'https://source.unsplash.com/800x600/?restaurant,pizza',
+    image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGl6emElMjByZXN0YXVyYW50fGVufDB8fDB8fHww',
     cuisine: 'Italian, Pizza',
     rating: 4.5,
     deliveryTime: '30-40 min',
@@ -27,7 +27,7 @@ const restaurants = [
   {
     id: '2',
     name: 'Burger Boulevard',
-    image: 'https://source.unsplash.com/800x600/?restaurant,burger',
+    image: 'https://images.unsplash.com/photo-1512152272829-e3139592d56f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJ1cmdlciUyMHJlc3RhdXJhbnR8ZW58MHx8MHx8fDA%3D',
     cuisine: 'American, Fast Food',
     rating: 4.3,
     deliveryTime: '25-35 min',
@@ -36,7 +36,7 @@ const restaurants = [
   {
     id: '3',
     name: 'Spice Garden',
-    image: 'https://source.unsplash.com/800x600/?restaurant,indian',
+    image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW5kaWFuJTIwcmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D',
     cuisine: 'Indian, North Indian',
     rating: 4.4,
     deliveryTime: '35-45 min',
@@ -45,7 +45,7 @@ const restaurants = [
   {
     id: '4',
     name: 'Sushi House',
-    image: 'https://source.unsplash.com/800x600/?restaurant,sushi',
+    image: 'https://images.unsplash.com/photo-1611141654212-3abb0e18345a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3VzaGklMjByZXN0YXVyYW50fGVufDB8fDB8fHww',
     cuisine: 'Japanese, Sushi',
     rating: 4.6,
     deliveryTime: '40-50 min',
