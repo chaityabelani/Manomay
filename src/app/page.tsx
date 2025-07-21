@@ -55,15 +55,15 @@ const restaurants = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       <Navbar />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
         {/* Hero Section */}
         <div className="py-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-gray-100 mb-4">
             Hungry? We've got you covered
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-300">
             Order food from the best restaurants in your city
           </p>
         </div>
@@ -73,7 +73,7 @@ export default function Home() {
 
         {/* Restaurant List */}
         <div className="py-8">
-          <h2 className="text-2xl font-bold mb-6">Popular Restaurants</h2>
+          <h2 className="text-2xl font-bold mb-6 text-gray-100">Popular Restaurants</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {restaurants.map((restaurant) => (
               <RestaurantCard key={restaurant.id} restaurant={restaurant} />

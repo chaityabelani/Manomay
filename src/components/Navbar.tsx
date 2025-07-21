@@ -14,12 +14,12 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
+    <nav className="orange-gradient shadow-lg fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-primary">Manomay</span>
+              <span className="text-2xl font-bold text-white">Manomay</span>
             </Link>
           </div>
 
@@ -30,12 +30,12 @@ export default function Navbar() {
               placeholder="Search for restaurants or dishes..."
               className="px-4 py-2 w-64 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary/50"
             />
-            <Link href="/orders" className="text-gray-700 hover:text-primary">
+            <Link href="/orders" className="text-white hover:text-gray-200">
               Orders
             </Link>
             <button
               onClick={handleLogout}
-              className="text-gray-700 hover:text-primary"
+              className="text-white hover:text-gray-200"
             >
               Logout
             </button>
@@ -45,7 +45,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-primary focus:outline-none"
+              className="text-white hover:text-gray-200 focus:outline-none"
             >
               <svg
                 className="h-6 w-6"
@@ -78,13 +78,13 @@ export default function Navbar() {
             />
             <Link
               href="/orders"
-              className="block px-3 py-2 text-gray-700 hover:text-primary"
+              className="block px-3 py-2 text-white hover:text-gray-200"
             >
               Orders
             </Link>
             <button
               onClick={handleLogout}
-              className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary"
+              className="block w-full text-left px-3 py-2 text-white hover:text-gray-200"
             >
               Logout
             </button>
