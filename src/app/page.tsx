@@ -1,6 +1,6 @@
 'use client';
 
-import Navbar from '@/components/Navbar';
+// import Navbar from '@/components/Navbar';
 import FoodCategory from '@/components/FoodCategory';
 import RestaurantCard from '@/components/RestaurantCard';
 
@@ -56,7 +56,7 @@ const restaurants = [
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
         {/* Hero Section */}
         <div className="py-8">
